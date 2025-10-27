@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="{{ asset('assets/images/favicon.ico') }}">
 
-    <title>@yield('title', 'FGM Admin')</title>
+    <title>@yield('title', 'Boringa')</title>
 
     <!-- Common Vendors Style-->
     <link rel="stylesheet" href="{{ asset('assets/src/css/vendors_css.css') }}">

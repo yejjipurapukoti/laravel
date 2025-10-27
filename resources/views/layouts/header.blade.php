@@ -1,18 +1,29 @@
 <header class="main-header">
     <div class="d-flex align-items-center logo-box justify-content-start">
-        <!-- Logo -->
-        <a href="" class="logo">
-            <!-- logo-->
-            {{--<div class="logo-mini w-40">--}}
-                {{--<span class="light-logo"><img src="{{ asset('assets/images/logo-letter.png') }}" alt="logo"></span>--}}
-                {{--<span class="dark-logo"><img src="{{ asset('assets/images/logo-white-letter.png') }}" alt="logo"></span>--}}
-            {{--</div>--}}
-            {{--<div class="logo-lg">--}}
-                {{--<span class="light-logo"><img src="{{ asset('assets/images/logo-light-text.png') }}" alt="logo"></span>--}}
-                {{--<span class="dark-logo"><img src="{{ asset('assets/images/logo-text.png') }}" alt="logo"></span>--}}
-            {{--</div>--}}
-        </a>
-    </div>
+    <!-- Logo -->
+    <a href="{{ route('dashboard') }}" class="logo">
+        <!-- Mini logo for small screens -->
+        <div class="logo-mini w-40">
+            <span class="light-logo">
+                <img src="{{ asset('assets/images/small.png') }}" alt="logo">
+            </span>
+            <span class="dark-logo">
+                <img src="{{ asset('assets/images/small.png') }}" alt="logo">
+            </span>
+        </div>
+
+        <!-- Large logo for desktop -->
+        <div class="logo-lg">
+            <span class="light-logo">
+                <img src="{{ asset('assets/images/borigam.png') }}" alt="logo">
+            </span>
+            <span class="dark-logo">
+                <img src="{{ asset('assets/images/borigam.png') }}" alt="logo">
+            </span>
+        </div>
+    </a>
+</div>
+
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top">
         <!-- Sidebar toggle button-->
@@ -121,7 +132,7 @@
                 {{--</li>--}}
 
                 <li class="btn-group nav-item d-xl-inline-flex d-none">
-                    <form id="logout-form" action="" method="POST" style="display: none;">
+                    <form id="logout-form" action="{{route('logout')}}" method="POST" style="display: none;">
                         @csrf
                     </form>
                     <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
