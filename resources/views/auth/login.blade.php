@@ -1,253 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Poppins", sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portal Login</title>
 
-        section {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-        }
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-        section .bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            pointer-events: none;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-        section .trees {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 100;
-            pointer-events: none;
-        }
+    body {
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-        section .girl {
-            position: absolute;
-            scale: 0.65;
-            pointer-events: none;
-            animation: animateGirl 10s linear infinite;
-        }
+    .container {
+      display: flex;
+      width: 950px;
+      height: 560px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      background: #ffffff;
+    }
 
-        @keyframes animateGirl {
-            0% { transform: translateX(calc(100% + 100vw)); }
-            50% { transform: translateX(calc(-100% - 100vw)); }
-            50.01% { transform: translateX(calc(-100% - 100vw)) rotateY(180deg); }
-            100% { transform: translateX(calc(100% + 100vw)) rotateY(180deg); }
-        }
+    /* Left (Login) Section */
+    .login-section {
+      width: 45%;
+      background-color: #1e1e1e;
+      color: #fff;
+      padding: 60px 45px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-        .login {
-            position: relative;
-            padding: 60px;
-            background: rgba(255, 255, 255, 0.25);
-            backdrop-filter: blur(15px);
-            border: 1px solid #fff;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-            border-right: 1px solid rgba(255, 255, 255, 0.5);
-            border-radius: 20px;
-            width: 400px;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-        }
+    .login-section h2 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
 
-        .login h2 {
-            text-align: center;
-            font-size: 2em;
-            font-weight: 600;
-            color: #8f2c24;
-        }
+    .login-section p {
+      color: #aaa;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
 
-        .login .inputBox {
-            position: relative;
-            width: 100%;
-        }
+    form label {
+      font-size: 13px;
+      color: #ccc;
+      margin-bottom: 6px;
+      display: block;
+    }
 
-        .login .inputBox input {
-            width: 100%;
-            padding: 15px 20px;
-            outline: none;
-            font-size: 1.1em;
-            color: #8f2c24;
-            border-radius: 5px;
-            background: #fff;
-            border: none;
-            margin-bottom: 20px;
-        }
+    form input {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      margin-bottom: 18px;
+      background-color: #2a2a2a;
+      color: #fff;
+    }
 
-        .login .inputBox ::placeholder {
-            color: #8f2c24;
-        }
+    form input::placeholder {
+      color: #777;
+    }
 
-        .login .inputBox #btn {
-            border: none;
-            outline: none;
-            background: #8f2c24;
-            color: #fff;
-            cursor: pointer;
-            font-size: 1.1em;
-            font-weight: 500;
-            transition: 0.5s;
-        }
+    .login-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #a37ef9;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-weight: 500;
+      cursor: pointer;
+      font-size: 15px;
+      transition: 0.3s;
+    }
 
-        .login .inputBox #btn:hover {
-            background: #d64c42;
-        }
+    .login-btn:hover {
+      background-color: #8b66e8;
+    }
 
-        .login .group {
-            display: flex;
-            justify-content: space-between;
-        }
+    .alert {
+      background-color: #ff4d4d;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      font-size: 13px;
+    }
 
-        .login .group a {
-            font-size: 1em;
-            color: #8f2c24;
-            font-weight: 500;
-            text-decoration: none;
-        }
+    .field-error {
+      color: #ff8c8c;
+      font-size: 13px;
+      margin-top: -14px;
+      margin-bottom: 10px;
+    }
 
-        .login .group a:nth-child(2) {
-            text-decoration: underline;
-        }
+    /* Right (Image) Section */
+    .welcome-section {
+      width: 55%;
+      background-color: #ffffff;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-        .leaves {
-            position: absolute;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1;
-            pointer-events: none;
-        }
+    .welcome-section img {
+      width: 90%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+    }
 
-        .leaves .set {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-        }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+      }
 
-        .leaves .set div {
-            position: absolute;
-            display: block;
-        }
+      .login-section, .welcome-section {
+        width: 100%;
+        height: auto;
+      }
 
-        .leaves .set div:nth-child(1) { left: 20%; animation: animate 20s linear infinite; }
-        .leaves .set div:nth-child(2) { left: 50%; animation: animate 14s linear infinite; }
-        .leaves .set div:nth-child(3) { left: 70%; animation: animate 12s linear infinite; }
-        .leaves .set div:nth-child(4) { left: 5%; animation: animate 15s linear infinite; }
-        .leaves .set div:nth-child(5) { left: 85%; animation: animate 18s linear infinite; }
-        .leaves .set div:nth-child(6) { left: 90%; animation: animate 12s linear infinite; }
-        .leaves .set div:nth-child(7) { left: 15%; animation: animate 14s linear infinite; }
-        .leaves .set div:nth-child(8) { left: 60%; animation: animate 15s linear infinite; }
-
-        @keyframes animate {
-            0% { opacity: 0; top: -10%; transform: translateX(20px) rotate(0deg); }
-            10% { opacity: 1; }
-            20% { transform: translateX(-20px) rotate(45deg); }
-            40% { transform: translateX(-20px) rotate(90deg); }
-            60% { transform: translateX(20px) rotate(180deg); }
-            80% { transform: translateX(-20px) rotate(45deg); }
-            100% { top: 110%; transform: translateX(20px) rotate(225deg); }
-        }
-    </style>
+      .welcome-section img {
+        width: 80%;
+        margin: 30px auto;
+      }
+    }
+  </style>
 </head>
 <body>
-<section>
-    <div class="leaves">
-        <div class="set">
-            <div><img src="{{ asset('assets/images/leaf_01.png') }}"></div>
-            <div><img src="{{ asset('assets/images/leaf_02.png') }}"></div>
-            <div><img src="{{ asset('assets/images/leaf_03.png') }}"></div>
-            <div><img src="{{ asset('assets/images/leaf_04.png') }}"></div>
-            <div><img src="{{ asset('assets/images/leaf_01.png') }}"></div>
-            <div><img src="{{ asset('assets/images/leaf_02.png') }}"></div>
-            <div><img src="{{ asset('assets/images/leaf_03.png') }}"></div>
-            <div><img src="{{ asset('assets/images/leaf_04.png') }}"></div>
+  <div class="container">
+    <!-- Left Login -->
+    <div class="login-section">
+      <h2>Login</h2>
+      <p>Enter your account details</p>
+
+      {{-- Error Message --}}
+      @if(session('error'))
+        <div class="alert">{{ session('error') }}</div>
+      @endif
+
+      @if ($errors->any())
+        <div class="alert">
+          <strong>Please fix the following errors:</strong>
+          <ul style="margin:8px 0 0; padding-left:18px;">
+            @foreach ($errors->all() as $error)
+              <li style="margin-bottom:6px;">{{ $error }}</li>
+            @endforeach
+          </ul>
         </div>
-    </div>
+      @endif
 
-    <img src="{{ asset('assets/images/bg.jpg') }}" class="bg">
-    <img src="{{ asset('assets/images/girl.png') }}" class="girl">
-    <img src="{{ asset('assets/images/trees.png') }}" class="trees">
-
-    <div class="login">
-    <h2>Sign In</h2>
-
-    {{-- Show session-based error (e.g., invalid credentials) --}}
-    @if (session('error'))
-        <div class="error-message">
-            {{ session('error') }}
-        </div>
-    @endif
-
-    {{-- Show validation errors --}}
-    @if ($errors->any())
-        <div class="error-message">
-            <ul style="margin:0; padding-left:15px;">
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-
-    <form action="{{ route('login') }}" method="POST">
+      <form method="POST" action="{{ route('login') }}">
         @csrf
+        <label for="email">Email Address</label>
+        <input id="email" type="email" name="email" placeholder="Enter your email" value="{{ old('email') }}" required autofocus>
+        @error('email')
+          <div class="field-error">{{ $message }}</div>
+        @enderror
 
-        <div class="inputBox">
-            <input type="email" name="email" placeholder="Email" value="{{ old('email') }}" required>
-        </div>
+        <label for="password">Password</label>
+        <input id="password" type="password" name="password" placeholder="Enter your password" required>
+        @error('password')
+          <div class="field-error">{{ $message }}</div>
+        @enderror
 
-        <div class="inputBox">
-            <input type="password" name="password" placeholder="Password" required>
-        </div>
-
-        <div class="inputBox">
-            <input type="submit" id="btn" value="Login">
-        </div>
-    </form>
-
-    <div class="group">
-        <a href="#">Forgot Password?</a>
-        <a href="#">Signup</a>
+        <button type="submit" class="login-btn">Login</button>
+      </form>
     </div>
-</div>
 
-</section>
-
-<!-- Vendor JS -->
-<script src="{{ asset('js/vendors.min.js') }}"></script>
-<script src="{{ asset('js/pages/chat-popup.js') }}"></script>
-<script src="{{ asset('icons/feather-icons/feather.min.js') }}"></script>
-
+    <!-- Right Section (White + Image) -->
+    <div class="welcome-section">
+      <img src="{{ asset('assets/images/ok.webp') }}" alt="Student Illustration">
+    </div>
+  </div>
 </body>
 </html>
