@@ -25,7 +25,7 @@
                     <li><a href="{{ route('courses.index') }}"><i data-feather="layers"></i><span>Courses</span></a></li>
                     <li><a href="{{route('student.course.form')}}"><i data-feather="package"></i><span>Course Assign</span></a></li>
                     <li><a href="{{route('institutes.index')}}"><i data-feather="check-square"></i><span>Placements</span></a></li>
-                    <li><a href="#"><i data-feather="users"></i><span>Student Department</span></a></li>
+                    <li><a href="{{route('college_logs.index')}}"><i data-feather="users"></i><span>College Logs</span></a></li>
                     <li><a href="#"><i data-feather="tag"></i><span>Images</span></a></li>
                     <li><a href="#"><i data-feather="clock"></i><span>Student Attendance</span></a></li>
                     <li><a href="#"><i data-feather="check-circle"></i><span>Staff</span></a></li>

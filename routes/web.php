@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\InstituteController;
+use App\Http\Controllers\CollegeLogController;
 
 
 /*
@@ -34,6 +35,8 @@ Route::middleware('auth')->group(function () {
     Route::resource('students', StudentController::class)->middleware('auth');
     Route::resource('courses', CourseController::class)->middleware('auth');
     Route::resource('institutes', InstituteController::class)->middleware('auth');
+    Route::resource('college_logs', CollegeLogController::class)->middleware('auth');
+
 
 
 });
