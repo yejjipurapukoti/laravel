@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
-@section('title', 'College Logs')
+@section('title', 'Slider Images')
 
 @section('content')
 <div class="container mt-5">
     <div class="d-flex justify-content-between align-items-center mb-3">
-        <h3>🏫 College Logs</h3>
-        <a href="{{ route('college_logs.create') }}" class="btn btn-success">+ Add Log</a>
+        <h3>🖼️ Slider Images</h3>
+        <a href="{{ route('slider.create') }}" class="btn btn-success">+ Add Image</a>
     </div>
 
     {{-- ✅ Success Message --}}
@@ -20,36 +20,45 @@
                 <thead class="table-success">
                     <tr>
                         <th>#</th>
+                        <th>Title</th>
                         <th>Image</th>
-                        <th>Name</th>
-                        <th>Description</th>
+                        <th>Order</th>
+                        <th>Status</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
+
                 <tbody>
-                    @forelse($collegeLogs as $index => $log)
+                    @forelse ($images as $index => $image)
                     <tr>
-                        <td>{{ $collegeLogs->firstItem() + $index }}</td>
+                        <td>{{ $images->firstItem() + $index }}</td>
+                        <td>{{ $image->title }}</td>
                         <td>
-                            @if($log->image)
-                                <img src="{{ asset('storage/' . $log->image) }}" 
-                                     alt="Image" width="70" height="70" class="rounded border">
+                            @if($image->image_path)
+                                <img src="{{ asset('storage/' . $image->image_path) }}" 
+                                     alt="Slider Image" 
+                                     class="rounded border" 
+                                     width="120" height="70">
                             @else
                                 <span class="text-muted">No Image</span>
                             @endif
                         </td>
-                        <td>{{ $log->name }}</td>
-                        <td class="text-start">{{ $log->description ?? '—' }}</td>
+                        <td>{{ $image->order_index }}</td>
                         <td>
-                            <a href="{{ route('college_logs.edit', $log->id) }}" 
+                            <span class="badge bg-{{ $image->status == 'active' ? 'success' : 'secondary' }}">
+                                {{ ucfirst($image->status) }}
+                            </span>
+                        </td>
+                        <td>
+                            <a href="{{ route('slider.edit', $image->id) }}" 
                                class="btn btn-sm btn-warning">Edit</a>
-
-                            <form action="{{ route('college_logs.destroy', $log->id) }}" 
-                                  method="POST" class="d-inline">
+                            <form action="{{ route('slider.destroy', $image->id) }}" 
+                                  method="POST" 
+                                  class="d-inline">
                                 @csrf
                                 @method('DELETE')
                                 <button class="btn btn-sm btn-danger" 
-                                        onclick="return confirm('Delete this log?')">
+                                        onclick="return confirm('Delete this image?')">
                                     Delete
                                 </button>
                             </form>
@@ -57,16 +66,16 @@
                     </tr>
                     @empty
                     <tr>
-                        <td colspan="5" class="text-center text-muted">No college logs found.</td>
+                        <td colspan="6" class="text-center text-muted">No slider images found.</td>
                     </tr>
                     @endforelse
                 </tbody>
             </table>
 
             {{-- ✅ Pagination --}}
-            @if($collegeLogs->hasPages())
+            @if($images->hasPages())
                 <div class="mt-3">
-                    {{ $collegeLogs->links() }}
+                    {{ $images->links() }}
                 </div>
             @endif
         </div>

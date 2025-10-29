@@ -7,6 +7,8 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\InstituteController;
 use App\Http\Controllers\CollegeLogController;
+use App\Http\Controllers\SliderImageController;
+use App\Http\Controllers\StudyMaterialController;
 
 
 /*
@@ -36,6 +38,10 @@ Route::middleware('auth')->group(function () {
     Route::resource('courses', CourseController::class)->middleware('auth');
     Route::resource('institutes', InstituteController::class)->middleware('auth');
     Route::resource('college_logs', CollegeLogController::class)->middleware('auth');
+    Route::resource('slider', SliderImageController::class)->middleware('auth');
+    Route::resource('materials', StudyMaterialController::class)->middleware('auth');
+
+
 
 
 
