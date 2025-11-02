@@ -1,149 +1,51 @@
-<header class="main-header">
+<header class="custom-header">
     <div class="d-flex align-items-center logo-box justify-content-start">
-    <!-- Logo -->
-    <a href="{{ route('dashboard') }}" class="logo">
-        <!-- Mini logo for small screens -->
-        <div class="logo-mini w-40">
-            <span class="light-logo">
-                <img src="{{ asset('assets/images/small.png') }}" alt="logo">
-            </span>
-            <span class="dark-logo">
-                <img src="{{ asset('assets/images/small.png') }}" alt="logo">
-            </span>
-        </div>
+        <!-- Logo -->
+        <a href="{{ route('dashboard') }}" class="logo">
+            <div class="logo-lg">
+                <img src="{{ asset('assets/images/borigam.png') }}" alt="Logo">
+            </div>
+        </a>
+    </div>
 
-        <!-- Large logo for desktop -->
-        <div class="logo-lg">
-            <span class="light-logo">
-                <img src="{{ asset('assets/images/borigam.png') }}" alt="logo">
-            </span>
-            <span class="dark-logo">
-                <img src="{{ asset('assets/images/borigam.png') }}" alt="logo">
-            </span>
-        </div>
-    </a>
-</div>
-
-    <!-- Header Navbar -->
+    <!-- Navbar -->
     <nav class="navbar navbar-static-top">
-        <!-- Sidebar toggle button-->
         <div class="app-menu">
             <ul class="header-megamenu nav">
+                <!-- Sidebar toggle -->
                 <li class="btn-group nav-item">
-                    <a href="#" class="waves-effect waves-light nav-link push-btn btn-primary-light" data-toggle="push-menu" role="button">
+                    <a href="#" class="waves-effect waves-light nav-link push-btn" data-toggle="push-menu" role="button">
                         <i data-feather="menu"></i>
                     </a>
                 </li>
-                <li class="btn-group d-lg-inline-flex d-none hide">
-                    <div class="app-menu">
-                        <div class="search-bx mx-5">
-                            <form>
-                                <div class="input-group">
-                                    <input type="search" class="form-control" placeholder="Search">
-                                    <div class="input-group-append">
-                                        <button class="btn" type="submit" id="button-addon3"><i class="icon-Search"><span class="path1"></span><span class="path2"></span></i></button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+
+                <!-- Search box -->
+                <li class="btn-group d-lg-inline-flex d-none">
+                    <div class="search-bx mx-3">
+                        <form>
+                            <div class="input-group">
+                                <input type="search" class="form-control" placeholder="Search...">
+                                <button class="btn btn-light" type="submit">
+                                    <i class="icon-Search"></i>
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </li>
             </ul>
         </div>
-        @if(isset($departmentName))
-            <div class="user-department">
-                <span>Department: {{ $departmentName }}</span>
-            </div>
-        @endif
 
+        <!-- Right side menu -->
         <div class="navbar-custom-menu r-side">
             <ul class="nav navbar-nav">
-                <li class="dropdown notifications-menu btn-group">
-                    <label class="switch">
-                        <a class="waves-effect waves-light btn-primary-light svg-bt-icon">
-                            <input type="checkbox" data-mainsidebarskin="toggle" id="toggle_left_sidebar_skin">
-                            <span class="switch-on"><i data-feather="moon"></i></span>
-                            <span class="switch-off"><i data-feather="sun"></i></span>
-                        </a>
-                    </label>
-                </li>
-                <li class="dropdown notifications-menu btn-group ">
-                    <a href="#" class="waves-effect waves-light btn-primary-light svg-bt-icon" data-bs-toggle="dropdown" title="Notifications">
-                        <i data-feather="bell"></i>
-                        <div class="pulse-wave"></div>
-                    </a>
-                    <ul class="dropdown-menu animated bounceIn">
-                        <li class="header">
-                            <div class="p-20">
-                                <div class="flexbox">
-                                    <div>
-                                        <h4 class="mb-0 mt-0">Notifications</h4>
-                                    </div>
-                                    <div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <!-- inner menu: contains the actual data -->
-                            <ul class="menu sm-scrol">
-                                <li>
-                                    <a href='#' title='No notifications are available'>
-                                        <i class='fa fa-bell text-info'></i>
-                                        No notifications are available
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="footer hide">
-                            <a href="component_notification.html">View all</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="btn-group nav-item d-xl-inline-flex d-none hide">
-                    <a href="#" class="waves-effect waves-light nav-link btn-primary-light svg-bt-icon" title="" id="live-chat">
-                        <i data-feather="message-circle"></i>
-                    </a>
-                </li>
-
-                <li class="btn-group d-xl-inline-flex d-none hide">
-                    <a href="#" class="waves-effect waves-light nav-link btn-primary-light svg-bt-icon dropdown-toggle" data-bs-toggle="dropdown">
-                        <img class="rounded" src="{{ asset('assets/images/svg-icon/usa.svg') }}" alt="">
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item my-5" href="#"><img class="w-20 rounded me-10" src="{{ asset('assets/images/svg-icon/usa.svg') }}" alt=""> English</a>
-                        <a class="dropdown-item my-5" href="#"><img class="w-20 rounded me-10" src="{{ asset('assets/images/svg-icon/spain.svg') }}" alt=""> Spanish</a>
-                        <a class="dropdown-item my-5" href="#"><img class="w-20 rounded me-10" src="{{ asset('assets/images/svg-icon/ger.svg') }}" alt=""> German</a>
-                        <a class="dropdown-item my-5" href="#"><img class="w-20 rounded me-10" src="{{ asset('assets/images/svg-icon/jap.svg') }}" alt=""> Japanese</a>
-                        <a class="dropdown-item my-5" href="#"><img class="w-20 rounded me-10" src="{{ asset('assets/images/svg-icon/fra.svg') }}" alt=""> French</a>
-                    </div>
-                </li>
-
-                <li class="btn-group nav-item d-xl-inline-flex d-none">
-                    <a href="#" data-provide="fullscreen" class="waves-effect waves-light nav-link btn-primary-light svg-bt-icon" title="Full Screen">
-                        <i data-feather="maximize"></i>
-                    </a>
-                </li>
-                <!-- Control Sidebar Toggle Button -->
-                {{--<li class="btn-group nav-item d-xl-inline-flex d-none">--}}
-                    {{--<a href="#" data-toggle="control-sidebar" title="Setting" class="waves-effect waves-light nav-link btn-primary-light svg-bt-icon">--}}
-                        {{--<i data-feather="sliders"></i>--}}
-                    {{--</a>--}}
-                {{--</li>--}}
-
-                <li class="btn-group nav-item d-xl-inline-flex d-none">
-                    <form id="logout-form" action="{{route('logout')}}" method="POST" style="display: none;">
+                <!-- Logout Button -->
+                <li class="btn-group nav-item">
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
                     </form>
                     <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
-                       class="waves-effect waves-light nav-link btn-primary-light svg-bt-icon" title="Logout">
+                       class="waves-effect waves-light nav-link btn-light svg-bt-icon" title="Logout">
                         <i data-feather="log-out"></i>
-                    </a>
-                </li>
-                <!-- User Account-->
-                <li class="dropdown user user-menu hide">
-                    <a href="#" class="waves-effect waves-light dropdown-toggle w-auto l-h-12 bg-transparent p-0 no-shadow" title="User" data-bs-toggle="modal" data-bs-target="#quick_user_toggle">
-                        <img src="{{ asset('assets/images/avatar/avatar-13.png') }}" class="avatar rounded-circle bg-primary-light h-40 w-40" alt="" />
                     </a>
                 </li>
             </ul>
@@ -151,3 +53,81 @@
     </nav>
 </header>
 
+{{-- ✅ Custom Header Style --}}
+<style>
+.custom-header {
+  background-color: #ffffff !important;
+  color: #1e293b !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Logo alignment */
+.custom-header .logo-lg img {
+  height: 55px;
+  width: auto;
+  display: block;
+}
+
+/* Navbar */
+.custom-header .navbar {
+  background: transparent !important;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Navbar links */
+.custom-header .navbar .nav > li > a {
+  color: #1e293b !important;
+  font-weight: 500;
+  padding: 10px 12px;
+  transition: 0.3s;
+  border-radius: 6px;
+}
+
+.custom-header .navbar .nav > li > a:hover {
+  background-color: rgba(0,0,0,0.05);
+  color: #0f172a !important;
+}
+
+/* Search box */
+.search-bx input {
+  border: 1px solid #e2e8f0;
+  border-radius: 5px 0 0 5px;
+  height: 40px;
+}
+
+.search-bx .btn {
+  border-radius: 0 5px 5px 0;
+  background-color: #f1f5f9;
+}
+
+/* Responsive fix */
+@media (max-width: 991px) {
+  .custom-header {
+    height: 70px;
+    padding: 0 15px;
+  }
+
+  .custom-header .logo-lg img {
+    height: 45px;
+  }
+
+  .search-bx {
+    display: none;
+  }
+}
+</style>
