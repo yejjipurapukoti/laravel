@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "32007059-0cf358bb-479a-45bf-bd61-00a8b0e8c7a2",
+		"name": "Boringa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "sliders",
+			"id": "32007059-6284bfc0-ec2e-4c1e-bd2f-267b0b3dab0a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{boringa}}sliders",
+					"host": [
+						"{{boringa}}sliders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "institute_deatails",
+			"id": "32007059-103bdda1-903d-4c84-847d-53867eae4963",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{boringa}}institute-details",
+					"host": [
+						"{{boringa}}institute-details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "toppers",
+			"id": "32007059-e7d8d007-1f68-4d63-9216-d36a8f8fd219",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{boringa}}toppers",
+					"host": [
+						"{{boringa}}toppers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "courses",
+			"id": "32007059-e2a4f039-2382-489d-9a2e-b48706b3ea88",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{boringa}}courses",
+					"host": [
+						"{{boringa}}courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "college-logos",
+			"id": "32007059-32de37c5-02ad-4c19-bd15-bf64c925bc3a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{boringa}}college-logos",
+					"host": [
+						"{{boringa}}college-logos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "study-materials",
+			"id": "32007059-e17014f7-84dd-4b98-b89b-755416da0b38",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{boringa}}study-materials",
+					"host": [
+						"{{boringa}}study-materials"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
