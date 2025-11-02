@@ -20494,9 +20494,9 @@ Height property
     margin-right: 0.75rem;
     margin-left: 0.75rem !important; } }
 
-    /*.main-header .navbar {
+    .main-header .navbar {
       background-color: transparent !important;
-    }*/
+    }
 .main-footer {
   background-color: rgba(255, 255, 255, 0);
   padding: 1.5rem;
