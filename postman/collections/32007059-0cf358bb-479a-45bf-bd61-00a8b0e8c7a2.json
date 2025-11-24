@@ -15,9 +15,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{boringa}}sliders",
+					"raw": "{{boringa}}apis",
 					"host": [
-						"{{boringa}}sliders"
+						"{{boringa}}apis"
 					]
 				}
 			},
