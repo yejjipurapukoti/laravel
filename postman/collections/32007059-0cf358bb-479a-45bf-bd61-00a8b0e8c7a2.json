@@ -112,6 +112,18 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "form",
+			"id": "32007059-9fac9170-83f1-4275-b7ec-1d5c72aa670b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	]
 }
