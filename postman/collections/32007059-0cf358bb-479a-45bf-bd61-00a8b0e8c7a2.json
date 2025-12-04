@@ -147,6 +147,18 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "admiison",
+			"id": "32007059-8a40b5cd-8876-496e-bc53-f2f735b1251f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	]
 }
