@@ -120,8 +120,31 @@
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"phone\": \"9876543210\",\r\n    \"email\": \"john@example.com\",\r\n    \"description\": \"I want more information about your institute.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://borigaminstituteedu.in/cms/public/api/contact",
+					"protocol": "https",
+					"host": [
+						"borigaminstituteedu",
+						"in"
+					],
+					"path": [
+						"cms",
+						"public",
+						"api",
+						"contact"
+					]
+				}
 			},
 			"response": []
 		}
