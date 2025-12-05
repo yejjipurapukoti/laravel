@@ -155,8 +155,202 @@
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "student_name",
+							"value": " Rahul Kumar",
+							"type": "text"
+						},
+						{
+							"key": "dob",
+							"value": " 2005-06-18",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": " Male",
+							"type": "text"
+						},
+						{
+							"key": "blood_group",
+							"value": " O+",
+							"type": "text"
+						},
+						{
+							"key": "aadhar",
+							"value": " 123456789012",
+							"type": "text"
+						},
+						{
+							"key": "aadhar_address",
+							"value": " 123 Main Street, Delhi",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": " Delhi",
+							"type": "text"
+						},
+						{
+							"key": "pin",
+							"value": " 110001",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": " Delhi",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": " 9876543210",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": " rahul@example.com",
+							"type": "text"
+						},
+						{
+							"key": "father_name",
+							"value": " Ramesh Kumar",
+							"type": "text"
+						},
+						{
+							"key": "father_mobile",
+							"value": " 9876501234",
+							"type": "text"
+						},
+						{
+							"key": "mother_name",
+							"value": " Sita Devi",
+							"type": "text"
+						},
+						{
+							"key": "mother_mobile",
+							"value": " 9876504321",
+							"type": "text"
+						},
+						{
+							"key": "present_address",
+							"value": " New Delhi",
+							"type": "text"
+						},
+						{
+							"key": "board",
+							"value": " CBSE",
+							"type": "text"
+						},
+						{
+							"key": "board_marks",
+							"value": " 450",
+							"type": "text"
+						},
+						{
+							"key": "board_cgpa",
+							"value": " 9.3",
+							"type": "text"
+						},
+						{
+							"key": "inter_college",
+							"value": " XYZ Inter College",
+							"type": "text"
+						},
+						{
+							"key": "inter_course",
+							"value": " Science",
+							"type": "text"
+						},
+						{
+							"key": "inter_marks",
+							"value": " 820",
+							"type": "text"
+						},
+						{
+							"key": "inter_cgpa",
+							"value": " 8.5",
+							"type": "text"
+						},
+						{
+							"key": "inter_college_address",
+							"value": " XYZ Road, Delhi",
+							"type": "text"
+						},
+						{
+							"key": "inter_city",
+							"value": " Delhi",
+							"type": "text"
+						},
+						{
+							"key": "inter_pin",
+							"value": " 110002",
+							"type": "text"
+						},
+						{
+							"key": "inter_state",
+							"value": " Delhi",
+							"type": "text"
+						},
+						{
+							"key": "courses[]",
+							"value": " BCA",
+							"type": "text"
+						},
+						{
+							"key": "courses[]",
+							"value": " MCA",
+							"type": "text"
+						},
+						{
+							"key": "durations",
+							"value": " 3 Years",
+							"type": "text"
+						},
+						{
+							"key": "how_know[]",
+							"value": " Facebook",
+							"type": "text"
+						},
+						{
+							"key": "how_know[]",
+							"value": " Friend",
+							"type": "text"
+						},
+						{
+							"key": "academic_notes",
+							"value": " Student is interested in computer courses.",
+							"type": "text"
+						},
+						{
+							"key": "agree",
+							"value": " 1",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"uuid": "46f16a6a-8247-483c-b706-a4e676666c83",
+							"src": "postman-cloud:///1f035489-ff13-4d30-b751-369d12c15407"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://borigaminstituteedu.in/cms/api/admission-form",
+					"protocol": "https",
+					"host": [
+						"borigaminstituteedu",
+						"in"
+					],
+					"path": [
+						"cms",
+						"api",
+						"admission-form"
+					]
+				}
 			},
 			"response": []
 		}
