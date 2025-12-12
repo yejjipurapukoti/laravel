@@ -301,11 +301,6 @@
 							"type": "text"
 						},
 						{
-							"key": "courses[]",
-							"value": " MCA",
-							"type": "text"
-						},
-						{
 							"key": "durations",
 							"value": " 3 Years",
 							"type": "text"
@@ -313,11 +308,6 @@
 						{
 							"key": "how_know[]",
 							"value": " Facebook",
-							"type": "text"
-						},
-						{
-							"key": "how_know[]",
-							"value": " Friend",
 							"type": "text"
 						},
 						{
@@ -339,7 +329,7 @@
 					]
 				},
 				"url": {
-					"raw": "https://borigaminstituteedu.in/cms/api/admission-form",
+					"raw": "https://borigaminstituteedu.in/cms/public/api/admission-form",
 					"protocol": "https",
 					"host": [
 						"borigaminstituteedu",
@@ -347,6 +337,7 @@
 					],
 					"path": [
 						"cms",
+						"public",
 						"api",
 						"admission-form"
 					]
